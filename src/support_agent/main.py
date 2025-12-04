@@ -5,7 +5,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from support_agent.api.routes import health_router
+from support_agent.api.routes import admin_router, email_router, health_router
 from support_agent.config import get_settings
 from support_agent.integrations.database.connection import init_db
 
@@ -51,6 +51,8 @@ def create_app() -> FastAPI:
 
     # Include routers
     app.include_router(health_router, prefix="/api/v1")
+    app.include_router(email_router, prefix="/api/v1")
+    app.include_router(admin_router, prefix="/api/v1")
 
     @app.get("/")
     async def root():

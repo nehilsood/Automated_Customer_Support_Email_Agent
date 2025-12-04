@@ -53,7 +53,9 @@ Customer Email
 │   ├── main.py                 # FastAPI application
 │   ├── config.py               # Pydantic settings
 │   ├── api/routes/             # API endpoints
-│   │   └── health.py           # Health check routes
+│   │   ├── health.py           # Health check routes
+│   │   ├── email.py            # Email processing endpoint
+│   │   └── admin.py            # Admin endpoints
 │   ├── agent/                  # AI agent module
 │   │   ├── core.py             # Main orchestrator
 │   │   ├── classifier.py       # Intent classification
@@ -67,17 +69,20 @@ Customer Email
 │   ├── integrations/
 │   │   ├── openai_client.py    # OpenAI API client
 │   │   ├── database/           # SQLAlchemy setup
-│   │   └── shopify/            # Shopify client (mock)
+│   │   ├── shopify/            # Shopify client (mock)
+│   │   └── email/              # Email parsing
 │   └── services/
 │       ├── embedding.py        # Embedding service
-│       └── rag.py              # RAG retrieval
+│       ├── rag.py              # RAG retrieval
+│       └── email_processor.py  # Email processing service
 ├── data/                       # Sample data
 │   ├── sample_faq.json
 │   ├── sample_policies.json
 │   └── sample_orders.json
 ├── scripts/
 │   ├── seed_knowledge_base.py  # Seed KB with embeddings
-│   └── test_agent.py           # Test script
+│   ├── test_agent.py           # Agent test script
+│   └── test_email_api.py       # Email API test script
 ├── docker-compose.yml          # PostgreSQL + pgvector
 └── pyproject.toml              # Dependencies
 ```
@@ -136,11 +141,19 @@ uvicorn src.support_agent.main:app --reload
 ### Test the Agent
 
 ```bash
-# Run comprehensive test suite
+# Run agent test suite
 python scripts/test_agent.py
+
+# Run Email API test suite
+python scripts/test_email_api.py
 
 # Or test via API
 curl http://localhost:8000/api/v1/health
+
+# Process an email
+curl -X POST http://localhost:8000/api/v1/email/process \
+  -H "Content-Type: application/json" \
+  -d '{"from": "customer@example.com", "subject": "Order Status", "body": "Where is my order #12345?"}'
 
 # Test RAG search
 curl -X POST http://localhost:8000/api/v1/health/test-rag \
@@ -211,6 +224,8 @@ Complaints, refund requests, and escalation requests automatically route to the 
 
 ## API Endpoints
 
+### Health Endpoints
+
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/` | GET | API info |
@@ -218,6 +233,57 @@ Complaints, refund requests, and escalation requests automatically route to the 
 | `/api/v1/health/ready` | GET | Kubernetes readiness probe |
 | `/api/v1/health/live` | GET | Kubernetes liveness probe |
 | `/api/v1/health/test-rag` | POST | Test RAG search |
+
+### Email Processing
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/v1/email/process` | POST | Process customer email |
+
+**Request:**
+```json
+{
+  "from": "customer@example.com",
+  "subject": "Order Status",
+  "body": "Where is my order #12345?",
+  "sender_name": "John Doe",
+  "email_id": "optional-tracking-id"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "response_text": "AI-generated response...",
+  "intent": "order_status",
+  "complexity": "simple",
+  "tools_used": ["get_order"],
+  "model_used": "gpt-4o-mini",
+  "tokens": {"input": 2500, "output": 120, "total": 2620},
+  "response_time_ms": 8500,
+  "escalated": false,
+  "escalation_reason": null,
+  "interaction_id": "uuid"
+}
+```
+
+### Admin Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/v1/admin/interactions` | GET | List recent interactions |
+| `/api/v1/admin/interactions/{id}` | GET | Get interaction detail |
+| `/api/v1/admin/escalations` | GET | List escalations |
+| `/api/v1/admin/escalations/{id}` | GET | Get escalation detail |
+| `/api/v1/admin/escalations/{id}` | PATCH | Update escalation status |
+
+**Query Parameters:**
+- `limit` (1-100, default 20)
+- `offset` (default 0)
+- `sender_email` - Filter by sender
+- `intent` - Filter by intent type
+- `status` - Filter escalations by status (pending/assigned/resolved)
 
 ## Sample Data
 
@@ -231,15 +297,18 @@ The project includes mock data for testing:
 
 - [x] Phase 1: Foundation (Database, RAG, Embeddings)
 - [x] Phase 2: Agent Core (Tools, Classifier, Router, Orchestrator)
-- [ ] Phase 3: Email API (REST endpoints, email processing)
+- [x] Phase 3: Email API (REST endpoints, email processing, admin dashboard)
 - [ ] Phase 4: Real Integrations (Shopify, Gmail)
 - [ ] Phase 5: Production (Lambda, Supabase)
 
 ## Testing
 
 ```bash
-# Run agent tests
+# Run agent tests (direct agent testing)
 python scripts/test_agent.py
+
+# Run Email API tests (full end-to-end via HTTP)
+python scripts/test_email_api.py
 
 # Test individual components
 python -c "
