@@ -1,0 +1,62 @@
+[
+  {
+    "title": "How do I track my order?",
+    "content": "To track your order, you can use the tracking link sent to your email after your order ships. Alternatively, log into your account on our website and go to 'My Orders' to see the current status and tracking information for all your orders. If you cannot find your tracking information, please contact us with your order number.",
+    "category": "faq",
+    "metadata": {"tags": ["tracking", "order", "shipping"]}
+  },
+  {
+    "title": "How long does shipping take?",
+    "content": "Standard shipping typically takes 5-7 business days within the continental US. Express shipping takes 2-3 business days. International shipping can take 10-21 business days depending on the destination country and customs processing. You will receive a shipping confirmation email with tracking information once your order ships.",
+    "category": "faq",
+    "metadata": {"tags": ["shipping", "delivery", "timeframe"]}
+  },
+  {
+    "title": "What is your return policy?",
+    "content": "We offer a 30-day return policy for all unused items in their original packaging. To initiate a return, please contact our customer support team with your order number. Once approved, you will receive a prepaid return shipping label. Refunds are processed within 5-7 business days after we receive the returned item.",
+    "category": "faq",
+    "metadata": {"tags": ["returns", "refund", "policy"]}
+  },
+  {
+    "title": "How do I cancel my order?",
+    "content": "Orders can be cancelled within 1 hour of placement if they haven't been processed yet. To cancel, please contact our customer support immediately with your order number. If the order has already been shipped, you will need to wait for delivery and then initiate a return. Cancellation requests are processed on a best-effort basis.",
+    "category": "faq",
+    "metadata": {"tags": ["cancel", "order", "modification"]}
+  },
+  {
+    "title": "Do you offer international shipping?",
+    "content": "Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by destination. Please note that international orders may be subject to customs duties and taxes, which are the responsibility of the recipient. Check our shipping page for a full list of supported countries.",
+    "category": "faq",
+    "metadata": {"tags": ["international", "shipping", "global"]}
+  },
+  {
+    "title": "How do I change my shipping address?",
+    "content": "To change your shipping address, please contact us immediately after placing your order. Address changes can only be made before the order ships. Once an order is shipped, we cannot modify the delivery address. If the package is returned to us due to an incorrect address, we will contact you to arrange reshipment.",
+    "category": "faq",
+    "metadata": {"tags": ["address", "shipping", "modification"]}
+  },
+  {
+    "title": "What payment methods do you accept?",
+    "content": "We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Shop Pay. All transactions are securely processed and encrypted. For orders over $100, you may also be eligible for Buy Now, Pay Later options through our payment partners.",
+    "category": "faq",
+    "metadata": {"tags": ["payment", "checkout", "credit card"]}
+  },
+  {
+    "title": "My order arrived damaged, what should I do?",
+    "content": "We're sorry to hear about the damaged item. Please contact our customer support within 48 hours of delivery with photos of the damaged product and packaging. We will arrange for a replacement to be sent at no additional cost, or provide a full refund if you prefer. Please keep the damaged items until we confirm the resolution.",
+    "category": "faq",
+    "metadata": {"tags": ["damaged", "replacement", "quality"]}
+  },
+  {
+    "title": "How do I contact customer support?",
+    "content": "You can reach our customer support team via email at support@example.com, or through the live chat on our website available Monday-Friday 9AM-6PM EST. For urgent matters, you can also call our toll-free number 1-800-EXAMPLE. We aim to respond to all inquiries within 24 hours.",
+    "category": "faq",
+    "metadata": {"tags": ["contact", "support", "help"]}
+  },
+  {
+    "title": "Do you offer gift wrapping?",
+    "content": "Yes, we offer complimentary gift wrapping on all orders. Simply select the 'Gift Wrap' option during checkout and add a personalized message if desired. Your order will arrive beautifully wrapped with a gift receipt that does not show the price. Gift wrapping adds 1-2 business days to processing time.",
+    "category": "faq",
+    "metadata": {"tags": ["gift", "wrapping", "present"]}
+  }
+]

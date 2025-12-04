@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Return and Refund Policy",
+    "content": "RETURN POLICY: We accept returns within 30 days of purchase for items in unused condition with original tags and packaging. To initiate a return: 1) Contact customer support with your order number, 2) Receive approval and return shipping label, 3) Ship items back within 14 days, 4) Refund processed within 5-7 business days of receipt. EXCEPTIONS: Final sale items, intimate apparel, swimwear, and personalized items cannot be returned. Opened beauty products can only be returned if defective. REFUND METHOD: Refunds are issued to the original payment method. Store credit is available upon request. Shipping costs are non-refundable unless the return is due to our error.",
+    "category": "policy",
+    "metadata": {"type": "return_policy", "version": "2.0"}
+  },
+  {
+    "title": "Shipping Policy",
+    "content": "DOMESTIC SHIPPING (US): Standard (5-7 business days) - Free on orders over $50, $5.99 otherwise. Express (2-3 business days) - $12.99. Overnight (next business day) - $24.99. INTERNATIONAL SHIPPING: Available to 50+ countries. Rates calculated at checkout based on destination and weight. Delivery typically 10-21 business days. IMPORTANT: International orders may incur customs duties and taxes payable by recipient. We are not responsible for delays due to customs. PROCESSING TIME: Orders placed before 2PM EST ship same day. Weekend orders ship Monday. During peak seasons, add 1-2 days to processing.",
+    "category": "policy",
+    "metadata": {"type": "shipping_policy", "version": "1.5"}
+  },
+  {
+    "title": "Order Cancellation Policy",
+    "content": "CANCELLATION WINDOW: Orders may be cancelled within 1 hour of placement, provided they have not entered processing. TO CANCEL: Contact customer support immediately with your order number. AFTER PROCESSING: Once an order is processing or shipped, it cannot be cancelled. Please refuse delivery or initiate a return after receipt. REFUND FOR CANCELLATIONS: Approved cancellations are refunded within 3-5 business days to the original payment method. PRE-ORDERS: Pre-orders may be cancelled anytime before the ship date.",
+    "category": "policy",
+    "metadata": {"type": "cancellation_policy", "version": "1.0"}
+  },
+  {
+    "title": "Exchange Policy",
+    "content": "EXCHANGES: We offer free exchanges for different sizes or colors within 30 days of purchase. TO EXCHANGE: 1) Contact support with order number and desired exchange item, 2) Receive prepaid return label, 3) Ship original item back, 4) New item ships when return is received. SIZE EXCHANGES: If your size is out of stock, we will notify you of restocking timeline or offer alternatives. PRICE DIFFERENCES: If exchanging for a higher-priced item, you will be charged the difference. Lower-priced exchanges result in store credit for the difference.",
+    "category": "policy",
+    "metadata": {"type": "exchange_policy", "version": "1.0"}
+  },
+  {
+    "title": "Privacy Policy Summary",
+    "content": "DATA COLLECTION: We collect information you provide (name, email, address, payment info) and automatically collected data (IP address, browsing behavior, device info). USE OF DATA: Your data is used to process orders, improve our services, send marketing communications (with consent), and prevent fraud. DATA SHARING: We do not sell your personal data. We share data with service providers (payment processors, shipping carriers) necessary to fulfill orders. YOUR RIGHTS: You may access, correct, or delete your data by contacting privacy@example.com. You can opt out of marketing emails anytime. SECURITY: We use industry-standard encryption and security measures to protect your data.",
+    "category": "policy",
+    "metadata": {"type": "privacy_policy", "version": "3.0"}
+  },
+  {
+    "title": "Warranty Policy",
+    "content": "STANDARD WARRANTY: All products carry a 1-year manufacturer warranty against defects in materials and workmanship. COVERAGE: Warranty covers manufacturing defects, premature wear under normal use, and component failures. NOT COVERED: Damage from misuse, accidents, unauthorized modifications, or normal wear and tear. TO CLAIM: Contact support with order number, description of issue, and photos. WARRANTY SERVICE: Approved claims receive repair, replacement, or refund at our discretion. EXTENDED WARRANTY: Available for purchase on select products at checkout.",
+    "category": "policy",
+    "metadata": {"type": "warranty_policy", "version": "1.0"}
+  },
+  {
+    "title": "Price Match Policy",
+    "content": "PRICE MATCH GUARANTEE: We match prices from authorized retailers within 14 days of purchase. ELIGIBLE RETAILERS: Major online retailers and brick-and-mortar stores selling identical items (same brand, model, color, size). EXCLUSIONS: Marketplace sellers, auction sites, membership clubs, clearance/closeout sales, and pricing errors. TO REQUEST: Contact support with link to competitor price. Verification required. REFUND: Approved price matches refunded as original payment method or store credit.",
+    "category": "policy",
+    "metadata": {"type": "price_match_policy", "version": "1.0"}
+  }
+]
